@@ -1,0 +1,40 @@
+
+Showing logs for build [32mthewiggs-environment-jenkinsx-p-d2h8j-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1608033173.379695,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mthewiggs-environment-jenkinsx-p-d2h8j-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mthewiggs-environment-jenkinsx-p-d2h8j-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mthewiggs-environment-jenkinsx-p-d2h8j-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-thewiggs-environment-jenkinsx-p-d2h8j-p5gpm[0m
+{"level":"info","ts":1608033179.4805613,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/thewiggs/environment-jenkinsx-production.git @ master in path /workspace/source"}
+{"level":"warn","ts":1608033179.4806812,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1608033179.524493,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mthewiggs-environment-jenkinsx-p-d2h8j-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mthewiggs-environment-jenkinsx-p-d2h8j-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:23027c0d854f2958cb446f38f95100bfc7fbbedb,1:ede454f6cf306d31cdf8d8872a2d1edbf45a906a
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow ede454f6cf306d31cdf8d8872a2d1edbf45a906a: 23027c0d854f2958cb446f38f95100bfc7fbbedb:
+DEBUG: ran git fetch --unshallow origin ede454f6cf306d31cdf8d8872a2d1edbf45a906a: 23027c0d854f2958cb446f38f95100bfc7fbbedb: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 23027c0d854f2958cb446f38f95100bfc7fbbedb
+DEBUG: ran git reset --hard 23027c0d854f2958cb446f38f95100bfc7fbbedb in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge ede454f6cf306d31cdf8d8872a2d1edbf45a906a
+DEBUG: ran git merge ede454f6cf306d31cdf8d8872a2d1edbf45a906a in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 23027c0d854f2958cb446f38f95100bfc7fbbedb..HEAD
+Merged SHA ede454f6cf306d31cdf8d8872a2d1edbf45a906a with commit message 'The command `** delete application` was run by robin and it generated this Pull Request' into base branch master
+
+Showing logs for build [32mthewiggs-environment-jenkinsx-p-d2h8j-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
